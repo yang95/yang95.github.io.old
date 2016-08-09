@@ -14,7 +14,31 @@
 	<link rel="stylesheet" href="../theme/css/templatemo-blue.css">
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
+<style>
+#list{
+margin:40px auto;
+	display:block;
+}
+#list li{
+color:#999;
+line-height:24px;
+list-style-type:square;
+}
+#list li a{
+color:#666;
+font-size:20px; 
+text-decoration:none;
+}
+#list li a:hover{
+color:#3366CC;
+}
 
+#list li small{
+float:right;
+color:#999;
+font-size:16px; 
+}
+</style>
 <!-- preloader section -->
 <div class="preloader">
 	<div class="sk-spinner sk-spinner-wordpress">
@@ -42,9 +66,10 @@
 		<div class="col-md-8 col-sm-12">
 			<div class="about">
 				<h3 class="accent">文章列表</h3> 
-				<ul> 
+				
+				<ul id="list"> 
 				{{foreach from = $list item=val}} 
-				<li><a href="{{$val["url"]}}">{{$val["title"]}}</a><small>{{$val["from"]}}</small></li>
+				<li><a href="{{$val["url"]}}">{{$val["title"]}}</a><small>{{$val["url"]}}</small></li>
 					
 				{{/foreach}}
 				</li>

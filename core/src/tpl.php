@@ -48,12 +48,15 @@ function article($key){
 
 function see(){
 	$key=filter("key"); 
-	$tpl=T();
+	$tpl=T(); 
+	$a=F("setting");
+	$data=$a->get("about");
 	$a=F($key);
-	$data=$a->get(); 
-	$tpl->assign("data",$data["content"]); 
+	$article=$a->get(); 
+	$tpl->assign("data",$data); 
+	$tpl->assign("article",$article["content"]); 
 	$name=date("Y-m-d-H-i-s",$key).".html";
-	$tpl->MakeHtmlFile($name,"article.html");
+	$tpl->MakeHtmlFile($name,"article.html"); 
 	header("location: ".SHOWAPP."/".$name);
 }
  

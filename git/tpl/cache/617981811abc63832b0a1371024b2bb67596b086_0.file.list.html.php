@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-08-09 15:08:08
+/* Smarty version 3.1.30, created on 2016-08-09 15:33:58
   from "E:\code\phpweb\blog\git\tpl\list.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_57a98158a94568_08108249',
+  'unifunc' => 'content_57a987661c9f67_74246431',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '617981811abc63832b0a1371024b2bb67596b086' => 
     array (
       0 => 'E:\\code\\phpweb\\blog\\git\\tpl\\list.html',
-      1 => 1470726399,
+      1 => 1470728034,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_57a98158a94568_08108249 (Smarty_Internal_Template $_smarty_tpl) {
+function content_57a987661c9f67_74246431 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +39,31 @@ function content_57a98158a94568_08108249 (Smarty_Internal_Template $_smarty_tpl)
 	<link rel="stylesheet" href="../theme/css/templatemo-blue.css">
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
+<style>
+#list{
+margin:40px auto;
+	display:block;
+}
+#list li{
+color:#999;
+line-height:24px;
+list-style-type:square;
+}
+#list li a{
+color:#666;
+font-size:20px; 
+text-decoration:none;
+}
+#list li a:hover{
+color:#3366CC;
+}
 
+#list li small{
+float:right;
+color:#999;
+font-size:16px; 
+}
+</style>
 <!-- preloader section -->
 <div class="preloader">
 	<div class="sk-spinner sk-spinner-wordpress">
@@ -69,7 +93,8 @@ function content_57a98158a94568_08108249 (Smarty_Internal_Template $_smarty_tpl)
 		<div class="col-md-8 col-sm-12">
 			<div class="about">
 				<h3 class="accent">文章列表</h3> 
-				<ul> 
+				
+				<ul id="list"> 
 				<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['list']->value, 'val');
 if ($_from !== null) {
@@ -77,7 +102,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['val']->value) {
 ?> 
 				<li><a href="<?php echo $_smarty_tpl->tpl_vars['val']->value["url"];?>
 "><?php echo $_smarty_tpl->tpl_vars['val']->value["title"];?>
-</a><small><?php echo $_smarty_tpl->tpl_vars['val']->value["from"];?>
+</a><small><?php echo $_smarty_tpl->tpl_vars['val']->value["url"];?>
 </small></li>
 					
 				<?php

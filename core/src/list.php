@@ -25,6 +25,7 @@ function getlist(){
 function del(){
 	$key=filter("key");
 	$c=F("list"); 
+	unlink(FILE."/".$key.".php");
 	echo $list=$c->delete($key);
 
 }
