@@ -1,4 +1,4 @@
 <?php
 
-header("location: ./git/app");
+header("location: ./app");
 ?>
