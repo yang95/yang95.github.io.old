@@ -1,0 +1,2 @@
+# yang95.github.io
+我这个东西的目的就是想做个针对gitpage的博客系统，在本地生成html静态缓存，然后上传到git上通过gitpage就可以访问，目前还有很多bug，还在继续修改中
