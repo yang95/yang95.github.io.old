@@ -3,15 +3,17 @@
 require_once("../lib/common.php");
 $route=filter("func");
 switch($route){
-	case "demo":demo();break; 
+	case "index":index();break; 
 	case "see":see();break; 
 	default:
 	break;
 }
-function demo(){
+function index(){
+	$a=F("setting");
+	$data=$a->get("about");
 	$tpl=T();
-	$tpl->assign("data","index"); 
-	$tpl->MakeHtmlFile("index1.html","index.html");
+	$tpl->assign("data",$data); 
+	$tpl->MakeHtmlFile("index.html","index.html");
 	header("location: ".SHOWAPP);
 }
 function see(){
