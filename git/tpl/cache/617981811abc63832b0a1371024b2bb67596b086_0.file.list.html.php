@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-08-09 15:15:47
-  from "E:\code\phpweb\blog\git\tpl\article.html" */
+/* Smarty version 3.1.30, created on 2016-08-09 15:08:08
+  from "E:\code\phpweb\blog\git\tpl\list.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_57a983236131c1_11275536',
+  'unifunc' => 'content_57a98158a94568_08108249',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'ac10d9d90e1eddc589aaf81b68961de3db6296a4' => 
+    '617981811abc63832b0a1371024b2bb67596b086' => 
     array (
-      0 => 'E:\\code\\phpweb\\blog\\git\\tpl\\article.html',
-      1 => 1470726942,
+      0 => 'E:\\code\\phpweb\\blog\\git\\tpl\\list.html',
+      1 => 1470726399,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_57a983236131c1_11275536 (Smarty_Internal_Template $_smarty_tpl) {
+function content_57a98158a94568_08108249 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,16 +68,25 @@ function content_57a983236131c1_11275536 (Smarty_Internal_Template $_smarty_tpl)
 	<div class="row">
 		<div class="col-md-8 col-sm-12">
 			<div class="about">
-				<h3 class="accent"><?php echo $_smarty_tpl->tpl_vars['article']->value["title"];?>
-</h3>
-				<h4><?php echo $_smarty_tpl->tpl_vars['article']->value["author"];?>
- |<?php echo $_smarty_tpl->tpl_vars['article']->value["from"];?>
- |<?php echo $_smarty_tpl->tpl_vars['article']->value["tag"];?>
- </h4>
-				<p>
-				<?php echo $_smarty_tpl->tpl_vars['article']->value["body"];?>
+				<h3 class="accent">文章列表</h3> 
+				<ul> 
+				<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['list']->value, 'val');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['val']->value) {
+?> 
+				<li><a href="<?php echo $_smarty_tpl->tpl_vars['val']->value["url"];?>
+"><?php echo $_smarty_tpl->tpl_vars['val']->value["title"];?>
+</a><small><?php echo $_smarty_tpl->tpl_vars['val']->value["from"];?>
+</small></li>
+					
+				<?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
 
-				</p>
+				</li>
 			</div>
 		</div>
 		<div class="col-md-4 col-sm-12">

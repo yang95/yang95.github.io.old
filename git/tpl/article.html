@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>{{$data["title"]}}</title>
+	<title>{{$data["name"]}}</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="">
@@ -29,8 +29,8 @@
 			<div class="col-md-12 col-sm-12">
 				<img src="../theme/images/tm-easy-profile.jpg" class="img-responsive img-circle tm-border" alt="templatemo easy profile">
 				<hr>
-				<h1 class="tm-title bold shadow">{{$data["title"]}}</h1>
-				<h1 class="white bold shadow">{{$data["author"]}}</h1>
+				<h1 class="tm-title bold shadow">{{$data["name"]}}</h1>
+				<h1 class="white bold shadow">{{$data["email"]}}</h1>
 			</div>
 		</div>
 	</div>
@@ -41,10 +41,10 @@
 	<div class="row">
 		<div class="col-md-8 col-sm-12">
 			<div class="about">
-				<h3 class="accent">{{$data["title"]}}</h3>
-				<h2>{{$data["author"]}}</h2>
+				<h3 class="accent">{{$article["title"]}}</h3>
+				<h4>{{$article["author"]}} |{{$article["from"]}} |{{$article["tag"]}} </h4>
 				<p>
-				{{$data["body"]}}
+				{{$article["body"]}}
 				</p>
 			</div>
 		</div>
