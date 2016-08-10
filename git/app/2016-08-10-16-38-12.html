@@ -1,33 +1,8 @@
-<?php
-/* Smarty version 3.1.30, created on 2016-08-10 16:38:13
-  from "E:\code\phpweb\blog\git\tpl\article.html" */
-
-/* @var Smarty_Internal_Template $_smarty_tpl */
-if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.30',
-  'unifunc' => 'content_57aae7f52aa972_99616769',
-  'has_nocache_code' => false,
-  'file_dependency' => 
-  array (
-    'ac10d9d90e1eddc589aaf81b68961de3db6296a4' => 
-    array (
-      0 => 'E:\\code\\phpweb\\blog\\git\\tpl\\article.html',
-      1 => 1470817969,
-      2 => 'file',
-    ),
-  ),
-  'includes' => 
-  array (
-  ),
-),false)) {
-function content_57aae7f52aa972_99616769 (Smarty_Internal_Template $_smarty_tpl) {
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title><?php echo $_smarty_tpl->tpl_vars['data']->value["name"];?>
-</title>
+	<title>yangakw</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="">
@@ -54,10 +29,8 @@ function content_57aae7f52aa972_99616769 (Smarty_Internal_Template $_smarty_tpl)
 			<div class="col-md-12 col-sm-12">
 				<img src="../theme/images/tm-easy-profile.jpg" class="img-responsive img-circle tm-border" alt="templatemo easy profile">
 				<hr>
-				<h1 class="tm-title bold shadow"><?php echo $_smarty_tpl->tpl_vars['data']->value["name"];?>
-</h1>
-				<h1 class="white bold shadow"><?php echo $_smarty_tpl->tpl_vars['data']->value["email"];?>
-</h1>
+				<h1 class="tm-title bold shadow">yangakw</h1>
+				<h1 class="white bold shadow">yangakw@qq.com</h1>
 			</div>
 		</div>
 	</div>
@@ -68,15 +41,10 @@ function content_57aae7f52aa972_99616769 (Smarty_Internal_Template $_smarty_tpl)
 	<div class="row">
 		<div class="col-md-8 col-sm-12">
 			<div class="about">
-				<h3 class="accent"><?php echo $_smarty_tpl->tpl_vars['article']->value["title"];?>
-</h3>
-				<small><?php echo $_smarty_tpl->tpl_vars['article']->value["author"];?>
- |<?php echo $_smarty_tpl->tpl_vars['article']->value["from"];?>
- |<?php echo $_smarty_tpl->tpl_vars['article']->value["tag"];?>
- </small>
+				<h3 class="accent">车牌识别easyPR</h3>
+				<small>yangakw |原创 |easyPR </small>
 				<p style="font-size:18px;font-family:微软雅黑;">
-				<?php echo $_smarty_tpl->tpl_vars['article']->value["body"];?>
-
+				<p>车牌识别，其实并不是一个简单的过程，在保证在足够快的前提下将图像信息转变成文字信息需要经过复杂的过程。</p><p>个人并不太了解算法的精髓，大体流程就是</p><p>第一步找到图片中的车牌并抠出。</p><p>第二部对抠出的车牌进行识别。</p><p>涉及到的技术主要是数字图像处理中...</p><p><br/></p><p>推荐一个仓库https://github.com/linuxxx/EasyPR_Android</p>
 				</p>
 			</div>
 		</div>
@@ -128,19 +96,10 @@ function content_57aae7f52aa972_99616769 (Smarty_Internal_Template $_smarty_tpl)
 </footer>
 
 <!-- javascript js -->	
-<?php echo '<script'; ?>
- src="../theme/js/jquery.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="../theme/js/bootstrap.min.js"><?php echo '</script'; ?>
->	
-<?php echo '<script'; ?>
- src="../theme/js/jquery.backstretch.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="../theme/js/custom.js"><?php echo '</script'; ?>
->
+<script src="../theme/js/jquery.js"></script>
+<script src="../theme/js/bootstrap.min.js"></script>	
+<script src="../theme/js/jquery.backstretch.min.js"></script>
+<script src="../theme/js/custom.js"></script>
 
 </body>
-</html><?php }
-}
+</html>
