@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-08-09 15:33:58
+/* Smarty version 3.1.30, created on 2016-08-10 09:25:02
   from "E:\code\phpweb\blog\git\tpl\list.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_57a987661c9f67_74246431',
+  'unifunc' => 'content_57aa826ef1c5f7_88921690',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '617981811abc63832b0a1371024b2bb67596b086' => 
     array (
       0 => 'E:\\code\\phpweb\\blog\\git\\tpl\\list.html',
-      1 => 1470728034,
+      1 => 1470792293,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_57a987661c9f67_74246431 (Smarty_Internal_Template $_smarty_tpl) {
+function content_57aa826ef1c5f7_88921690 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -118,23 +118,24 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 			<div class="skills">
 				<h2 class="white">Skills</h2>
 				<strong>PHP MySQL</strong>
-				<span class="pull-right">70%</span>
+				<span class="pull-right">80%</span>
 					<div class="progress">
 						<div class="progress-bar progress-bar-primary" role="progressbar" 
-                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
 					</div>
-				<strong>UI/UX Design</strong>
+				<strong>html/css</strong>
 				<span class="pull-right">85%</span>
 					<div class="progress">
 						<div class="progress-bar progress-bar-primary" role="progressbar" 
                         aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;"></div>
 					</div>
-				<strong>Bootstrap</strong>
-				<span class="pull-right">95%</span>
+				<strong>js</strong>
+				<span class="pull-right">75%</span>
 					<div class="progress">
 						<div class="progress-bar progress-bar-primary" role="progressbar" 
-                        aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;"></div>
+                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
 					</div>
+					
 			</div>
 		</div>
 	</div>
