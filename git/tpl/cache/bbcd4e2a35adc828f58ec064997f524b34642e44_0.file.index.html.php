@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-08-09 14:27:41
+/* Smarty version 3.1.30, created on 2016-08-10 09:11:23
   from "E:\code\phpweb\blog\git\tpl\index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_57a977dd053cc0_40120988',
+  'unifunc' => 'content_57aa7f3bc852a0_35281243',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bbcd4e2a35adc828f58ec064997f524b34642e44' => 
     array (
       0 => 'E:\\code\\phpweb\\blog\\git\\tpl\\index.html',
-      1 => 1470724055,
+      1 => 1470791444,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_57a977dd053cc0_40120988 (Smarty_Internal_Template $_smarty_tpl) {
+function content_57aa7f3bc852a0_35281243 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -76,6 +76,11 @@ function content_57a977dd053cc0_40120988 (Smarty_Internal_Template $_smarty_tpl)
 				<?php echo $_smarty_tpl->tpl_vars['data']->value["intro"];?>
 
 				</p>
+				<div class="row">
+					<div class="col-md-offset-8 col-md-4">
+						<a href="list.html" class="btn btn-large btn-success">查看文章</a>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="col-md-4 col-sm-12">
