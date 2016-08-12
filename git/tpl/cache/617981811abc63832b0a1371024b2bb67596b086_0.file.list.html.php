@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-08-10 09:25:02
+/* Smarty version 3.1.30, created on 2016-08-12 09:50:57
   from "E:\code\phpweb\blog\git\tpl\list.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_57aa826ef1c5f7_88921690',
+  'unifunc' => 'content_57ad2b8159ba86_37405178',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '617981811abc63832b0a1371024b2bb67596b086' => 
     array (
       0 => 'E:\\code\\phpweb\\blog\\git\\tpl\\list.html',
-      1 => 1470792293,
+      1 => 1470966649,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_57aa826ef1c5f7_88921690 (Smarty_Internal_Template $_smarty_tpl) {
+function content_57ad2b8159ba86_37405178 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +47,7 @@ margin:40px auto;
 #list li{
 color:#999;
 line-height:24px;
-list-style-type:square;
+list-style-type:none;
 }
 #list li a{
 color:#666;
@@ -94,13 +94,13 @@ font-size:16px;
 			<div class="about">
 				<h3 class="accent">文章列表</h3> 
 				
-				<ul id="list"> 
+				<ul id="list" class="list-group"> 
 				<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['list']->value, 'val');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['val']->value) {
 ?> 
-				<li><a href="<?php echo $_smarty_tpl->tpl_vars['val']->value["url"];?>
+				<li class="list-group-item"><a href="<?php echo $_smarty_tpl->tpl_vars['val']->value["url"];?>
 "><?php echo $_smarty_tpl->tpl_vars['val']->value["title"];?>
 </a><small><?php echo $_smarty_tpl->tpl_vars['val']->value["url"];?>
 </small></li>

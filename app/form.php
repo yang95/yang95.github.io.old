@@ -180,6 +180,7 @@ var um = UM.getEditor('myEditor',{
            $.post(this.url,{"func":"add_art","key":key,"edit":from},function(d,e){
               if(d.status){
                   alert("添加成功！");
+                  location.href="list.php";
               }
             });
       },

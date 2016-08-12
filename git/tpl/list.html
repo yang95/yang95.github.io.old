@@ -22,7 +22,7 @@ margin:40px auto;
 #list li{
 color:#999;
 line-height:24px;
-list-style-type:square;
+list-style-type:none;
 }
 #list li a{
 color:#666;
@@ -67,9 +67,9 @@ font-size:16px;
 			<div class="about">
 				<h3 class="accent">文章列表</h3> 
 				
-				<ul id="list"> 
+				<ul id="list" class="list-group"> 
 				{{foreach from = $list item=val}} 
-				<li><a href="{{$val["url"]}}">{{$val["title"]}}</a><small>{{$val["url"]}}</small></li>
+				<li class="list-group-item"><a href="{{$val["url"]}}">{{$val["title"]}}</a><small>{{$val["url"]}}</small></li>
 					
 				{{/foreach}}
 				</li>
