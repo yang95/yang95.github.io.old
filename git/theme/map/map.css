@@ -27,7 +27,7 @@ p{margin-left:5px; font-size:14px;}
 }
 .myContainer textarea{
 	width:90%;
-	height:100px;
+	height:50px;
 	margin:10px auto;
 	resize: none;
 }

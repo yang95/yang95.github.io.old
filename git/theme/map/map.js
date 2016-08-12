@@ -1,0 +1,97 @@
+app={ 
+	init:function(){
+		if(! window.localStorage){    
+			alert("浏览支持localStorage")
+			return false;
+		}  
+		map.centerAndZoom("济南",12);                
+		map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
+		map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
+		map.setDefaultCursor("url('bird.cur')");//设置鼠标样式
+
+
+		$(".myimg").click(this.click);
+		$("#iwantsay").change(this.change);
+		this.on();
+		
+	},
+	gps:function(){
+		var geolocation = new BMap.Geolocation();
+		//通过浏览器获取经纬度
+		geolocation.getCurrentPosition( this.callbackgps ,{enableHighAccuracy: true});
+	},
+	callbackgps:function(r){ 
+		mypoint=r.point;
+	},
+	click:function(){
+		var container=$(".myContainer");
+		var myimg=$(".myimg");
+		var toggle=$(".toggle");
+		if(container.css("bottom")=="10px"){
+			container.animate({bottom:"-1000px"},"slow");
+			toggle.show();
+		}else{
+			container.animate({bottom:"10px"},"slow");
+			toggle.hide();
+		}
+
+	},
+	change:function(){
+		app.gps();
+		var iwantsay=$("#iwantsay").val();
+		localStorage.setItem("iwantsay",iwantsay); 
+		var data={
+			"lng":mypoint.lng,
+			"lat":mypoint.lat,
+			"key":key,
+			"msg":iwantsay,
+		};
+		Wdog.child(key).set(data);
+	},
+	addmark:function(item){
+
+		var mk = new BMap.Marker({"lng":item.lng,"lat":item.lat});
+		map.addOverlay(mk);
+		map.panTo({"lng":item.lng,"lat":item.lat});  
+		var point = new BMap.Point(item.lng,item.lat);
+		var marker = new BMap.Marker(point);  // 创建标注
+		map.addOverlay(marker);              // 将标注添加到地图中   
+		var opts = {
+		  width : 200,     // 信息窗口宽度
+		  height: 100,     // 信息窗口高度
+		  title : "Message" , // 信息窗口标题
+		}
+		var infoWindow = new BMap.InfoWindow(item.msg, opts);  // 创建信息窗口对象 
+		marker.addEventListener("click", function(){          
+			map.openInfoWindow(infoWindow,point); //开启信息窗口
+		});
+	},
+	on:function(){
+		Wdog.on("child_added", function() {    
+		     
+		}, function(error){
+		    // 处理请求失败打错误
+		});
+		Wdog.on("child_changed", function(datasnapshot) {    
+		     console.log( datasnapshot.val() );
+		     app.addmark(datasnapshot.val());
+		}, function(error){
+		    // 处理请求失败打错误
+		});
+		Wdog.on("child_removed", function(datasnapshot) {    
+		      
+		}, function(error){
+		    // 处理请求失败打错误
+		});
+	}
+
+};
+
+$(function(){
+	key = prompt("输入你的id");
+	today=new Date();  
+	map = new BMap.Map("allmap");
+	Wdog = new Wilddog("https://poke.wilddogio.com/"+today.toLocaleDateString());
+	mypoint={lng:null,lat:null,};
+	app.init(map);	 
+});
