@@ -1,0 +1,33 @@
+body, html {width: 100%;height: 100%;margin:0;font-family:"微软雅黑";}
+#allmap{width:100%;height:100%;}
+p{margin-left:5px; font-size:14px;}
+.myContainer{
+	position:fixed;
+	width:100%;
+	max-width:500px;
+	height:50%;
+	padding:10px;
+	background:#fff;
+	z-index:100;
+	left:0px;
+	bottom:10px;
+	overflow: hidden;
+	border-radius: 50px;
+}
+.myimg{
+	margin:10px auto;
+	text-align: center;
+}
+.toggle{
+	display:none;
+	position:fixed;
+	bottom:10px;
+	left:10px; 
+	z-index: 101;  
+}
+.myContainer textarea{
+	width:90%;
+	height:100px;
+	margin:10px auto;
+	resize: none;
+}

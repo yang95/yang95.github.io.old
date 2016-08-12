@@ -34,7 +34,10 @@
 	  </li>
       <li><a href="../core/src/tpl.php?func=list" class="am-text-warning" target="_blank">
 	  <span class="am-icon-btn am-icon-briefcase"></span><br>生成列表<br></a></li>
-      <li><a href="#" class="am-text-danger"><span class="am-icon-btn am-icon-recycle"></span><br>昨日访问<br>80082</a></li>
+      <li><a href="../core/src/tpl.php?func=map" class="am-text-danger" target="_blank">
+        <span class="am-icon-btn am-icon-recycle"></span>
+        <br>生成地图</a>
+      </li>
       <li><a href="#" class="am-text-secondary"><span class="am-icon-btn am-icon-user-md"></span><br>在线用户<br>3000</a></li>
     </ul>
 

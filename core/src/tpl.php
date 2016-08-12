@@ -5,7 +5,8 @@ $route=filter("func");
 switch($route){
 	case "index":index();break; 
 	case "list":list_();break;  
-	case "see":see();break; 
+	case "see":see();break;  
+	case "map":map();break; 
 	default:
 	break;
 }
@@ -58,6 +59,14 @@ function see(){
 	$name=date("Y-m-d-H-i-s",$key).".html";
 	$tpl->MakeHtmlFile($name,"article.html"); 
 	header("location: ".SHOWAPP."/".$name);
+}
+function map(){ 
+	$tpl=T(); 
+	$a=F("setting");
+	$data=$a->get("about"); 
+	$tpl->assign("data",$data);  
+	$tpl->MakeHtmlFile("map.html","map.html"); 
+	header("location: ".SHOWAPP."/map.html");
 }
  
 ?>
