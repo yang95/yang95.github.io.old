@@ -84,6 +84,28 @@
               <small>250字以内写出你的一生...</small>
             </div>
           </div>
+		  
+		     <div class="am-form-group">
+            <label for="user-intro" class="am-u-sm-3 am-form-label">模块 / Module1</label>
+            <div class="am-u-sm-9">
+              <textarea class="" rows="5" id="user-module1" placeholder="输入"></textarea>
+            </div>
+          </div>
+		  
+		     <div class="am-form-group">
+            <label for="user-intro" class="am-u-sm-3 am-form-label">模块 / Module2</label>
+            <div class="am-u-sm-9">
+              <textarea class="" rows="5" id="user-module2" placeholder="输入"></textarea>
+            </div>
+          </div>
+		  
+		     <div class="am-form-group">
+            <label for="user-intro" class="am-u-sm-3 am-form-label">模块 / Module3</label>
+            <div class="am-u-sm-9">
+              <textarea class="" rows="5" id="user-module3" placeholder="输入"></textarea>
+            </div>
+          </div>
+		  
 
           <div class="am-form-group">
             <div class="am-u-sm-9 am-u-sm-push-3">
@@ -129,6 +151,9 @@ app={
 			$("#user-QQ").val(data.QQ);
 			$("#user-weibo").val(data.weibo);
 			$("#user-intro").val(data.intro);
+			$("#user-module1").val(data.module1);
+			$("#user-module2").val(data.module2);
+			$("#user-module3").val(data.module3);
 		});
 	},
 	url:"../core/src/about.php",
@@ -139,7 +164,10 @@ app={
 			"email":$("#user-email").val(),
 			"weibo":$("#user-weibo").val(),
 			"QQ":$("#user-QQ").val(),
-			"intro":$("#user-intro").val()
+			"intro":$("#user-intro").val(),
+			"module1":$("#user-module1").val(),
+			"module2":$("#user-module2").val(),
+			"module3":$("#user-module3").val(),
 		};
 		$.post(this.url,{"func":"editsub","form":form},function(){
 			location.reload(true);
