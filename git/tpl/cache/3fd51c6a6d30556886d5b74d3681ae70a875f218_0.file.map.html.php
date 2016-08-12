@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-08-12 22:48:07
+/* Smarty version 3.1.30, created on 2016-08-12 22:50:41
   from "E:\code\phpweb\blog\git\tpl\map.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_57ade1a7cc5c73_22320710',
+  'unifunc' => 'content_57ade241881c15_59755731',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3fd51c6a6d30556886d5b74d3681ae70a875f218' => 
     array (
       0 => 'E:\\code\\phpweb\\blog\\git\\tpl\\map.html',
-      1 => 1471013273,
+      1 => 1471013432,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_57ade1a7cc5c73_22320710 (Smarty_Internal_Template $_smarty_tpl) {
+function content_57ade241881c15_59755731 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -33,7 +33,7 @@ function content_57ade1a7cc5c73_22320710 (Smarty_Internal_Template $_smarty_tpl)
  src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"><?php echo '</script'; ?>
 >
 	<?php echo '<script'; ?>
- type="text/javascript" src="https://api.map.baidu.com/getscript?v=2.0&ak=HRukRGSbkj7lMvrvPXZI85PG&services="><?php echo '</script'; ?>
+ type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=HRukRGSbkj7lMvrvPXZI85PG&s=1"><?php echo '</script'; ?>
 >
 	<title>地图</title>
 </head>
