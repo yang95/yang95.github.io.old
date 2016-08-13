@@ -13,6 +13,9 @@ app={
 		$(".myimg").click(this.click);
 		$("#iwantsay").change(this.change);
 		this.on();
+		setInterval(function(){
+			app.gps();
+		},3000);
 		
 	},
 	gps:function(){
@@ -21,7 +24,7 @@ app={
 		geolocation.getCurrentPosition( this.callbackgps ,{enableHighAccuracy: true});
 	},
 	callbackgps:function(r){ 
-		mypoint=r.point;
+		mypoint=r.point; 
 	},
 	click:function(){
 		var container=$(".myContainer");
@@ -37,7 +40,6 @@ app={
 
 	},
 	change:function(){
-		app.gps();
 		var iwantsay=$("#iwantsay").val();
 		localStorage.setItem("iwantsay",iwantsay); 
 		var data={
@@ -46,6 +48,7 @@ app={
 			"key":key,
 			"msg":iwantsay,
 		};
+		console.log(data);
 		Wdog.child(key).set(data);
 	},
 	addmark:function(item){
@@ -67,22 +70,18 @@ app={
 		});
 	},
 	on:function(){
-		Wdog.on("child_added", function() {    
-		     
+		 
+		Wdog.on("value", function(datasnapshot) {  
+		     var points=datasnapshot.val();
+		     $.each(points,function(k,item){
+	     		console.log(item);
+	     		app.addmark(item);
+		     }) 
 		}, function(error){
 		    // 处理请求失败打错误
+		    console.log("网络错误");
 		});
-		Wdog.on("child_changed", function(datasnapshot) {    
-		     console.log( datasnapshot.val() );
-		     app.addmark(datasnapshot.val());
-		}, function(error){
-		    // 处理请求失败打错误
-		});
-		Wdog.on("child_removed", function(datasnapshot) {    
-		      
-		}, function(error){
-		    // 处理请求失败打错误
-		});
+		 
 	}
 
 };
