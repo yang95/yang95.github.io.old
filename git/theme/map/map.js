@@ -44,6 +44,12 @@ app={
 	change:function(){
 		var iwantsay=$("#iwantsay").val();
 		localStorage.setItem("iwantsay",iwantsay); 
+		if(mypoint.lng == null && mypoint.lng=undefined){
+			alert("稍等。。。正在定位中");
+			$("#iwantsay").val("");
+			app.gps();
+			return false;
+		}
 		var data={
 			"lng":mypoint.lng,
 			"lat":mypoint.lat,
