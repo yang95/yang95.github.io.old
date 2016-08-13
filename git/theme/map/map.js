@@ -6,6 +6,9 @@ app={
 		// key = localStorage.getItem("key") ? localStorage.getItem("key") : prompt("输入你的id");
 		// localStorage.setItem("key",key);
 		key=prompt("输入你的id");
+		if(! key){
+				return false;
+		}
 		map.centerAndZoom("济南",12);                
 		map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
 		map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
@@ -16,7 +19,15 @@ app={
 		$("#iwantsay").change(this.change);
 		this.on();
 		setInterval(function(){
-			app.gps();
+			app.gps(); 
+			var iwantsay=localStorage.getItem("iwantsay");
+			 var data={
+				"lng":mypoint.lng,
+				"lat":mypoint.lat,
+				"key":key,
+				"msg":iwantsay,
+			}; 
+			Wdog.child(key).set(data);
 		},3000);
 		
 	},
@@ -33,30 +44,18 @@ app={
 		var myimg=$(".myimg");
 		var toggle=$(".toggle");
 		if(container.css("bottom")=="10px"){
-			container.animate({bottom:"-1000px"},"slow");
+			container.animate({bottom:"-1000px",display:"none"},"slow");
 			toggle.show();
 		}else{
-			container.animate({bottom:"10px"},"slow");
-			toggle.hide();
+			toggle.hide(); 
+			container.animate({bottom:"10px",display:"block"},"slow");
 		}
 
 	},
 	change:function(){
 		var iwantsay=$("#iwantsay").val();
 		localStorage.setItem("iwantsay",iwantsay); 
-		if(mypoint.lng == null && mypoint.lng=undefined){
-			alert("稍等。。。正在定位中");
-			$("#iwantsay").val("");
-			app.gps();
-			return false;
-		}
-		var data={
-			"lng":mypoint.lng,
-			"lat":mypoint.lat,
-			"key":key,
-			"msg":iwantsay,
-		}; 
-		Wdog.child(key).set(data);
+
 	},
 	addmark:function(item){
 		var a=11;
