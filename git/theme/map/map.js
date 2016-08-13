@@ -3,9 +3,9 @@ app={
 		if(! window.localStorage){     
 			return false;
 		}  
-		key = localStorage.getItem("key") ? localStorage.getItem("key") : prompt("输入你的id");
-		localStorage.setItem("key",key);
-
+		// key = localStorage.getItem("key") ? localStorage.getItem("key") : prompt("输入你的id");
+		// localStorage.setItem("key",key);
+		key=prompt("输入你的id");
 		map.centerAndZoom("济南",12);                
 		map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
 		map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
