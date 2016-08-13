@@ -53,12 +53,25 @@ app={
 		Wdog.child(key).set(data);
 	},
 	addmark:function(item){
+		var a=11;
+		if(item.lng==mypoint.lng && item.lat==mypoint.lat){
+			a=10;
+		}
+		var myIcon = new BMap.Icon("http://api.map.baidu.com/img/markers.png", 
+	 			new BMap.Size(23, 25), {  
+                    offset: new BMap.Size(10, 25), // 指定定位位置  
+                    imageOffset: new BMap.Size(0, 0 - a * 25) // 设置图片偏移  
+                }); 
 
 		var mk = new BMap.Marker({"lng":item.lng,"lat":item.lat});
 		map.addOverlay(mk);
 		map.panTo({"lng":item.lng,"lat":item.lat});  
 		var point = new BMap.Point(item.lng,item.lat);
-		var marker = new BMap.Marker(point);  // 创建标注
+		var marker = new BMap.Marker(point,{icon:myIcon});  // 创建标注
+
+	 
+
+
 		map.addOverlay(marker);              // 将标注添加到地图中   
 		var opts = {
 		  width : 200,     // 信息窗口宽度
@@ -66,6 +79,7 @@ app={
 		  title : item.key , // 信息窗口标题
 		}
 		var infoWindow = new BMap.InfoWindow(item.msg, opts);  // 创建信息窗口对象 
+ 
 		marker.addEventListener("click", function(){          
 			map.openInfoWindow(infoWindow,point); //开启信息窗口
 		});
