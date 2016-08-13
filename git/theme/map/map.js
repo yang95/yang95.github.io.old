@@ -63,7 +63,7 @@ app={
 		var opts = {
 		  width : 200,     // 信息窗口宽度
 		  height: 100,     // 信息窗口高度
-		  title : "Message" , // 信息窗口标题
+		  title : item.key , // 信息窗口标题
 		}
 		var infoWindow = new BMap.InfoWindow(item.msg, opts);  // 创建信息窗口对象 
 		marker.addEventListener("click", function(){          
