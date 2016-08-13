@@ -1,9 +1,11 @@
 app={ 
 	init:function(){
-		if(! window.localStorage){    
-			alert("浏览支持localStorage")
+		if(! window.localStorage){     
 			return false;
 		}  
+		key = localStorage.getItem("key") || prompt("输入你的id");
+		localStorage.setItem("key",key);
+
 		map.centerAndZoom("济南",12);                
 		map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
 		map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
@@ -47,8 +49,7 @@ app={
 			"lat":mypoint.lat,
 			"key":key,
 			"msg":iwantsay,
-		};
-		console.log(data);
+		}; 
 		Wdog.child(key).set(data);
 	},
 	addmark:function(item){
@@ -73,8 +74,7 @@ app={
 		 
 		Wdog.on("value", function(datasnapshot) {  
 		     var points=datasnapshot.val();
-		     $.each(points,function(k,item){
-	     		console.log(item);
+		     $.each(points,function(k,item){ 
 	     		app.addmark(item);
 		     }) 
 		}, function(error){
@@ -87,10 +87,13 @@ app={
 };
 
 $(function(){
-	key = prompt("输入你的id");
 	today=new Date();  
+	year=today.getFullYear().toString();
+	month=(today.getMonth()+1).toString();
+	day=today.getDate().toString();
+	today=year+"/"+month+"/"+day;
 	map = new BMap.Map("allmap");
-	Wdog = new Wilddog("https://poke.wilddogio.com/"+today.toLocaleDateString());
+	Wdog = new Wilddog("https://poke.wilddogio.com/"+today);
 	mypoint={lng:null,lat:null,};
 	app.init(map);	 
 });
