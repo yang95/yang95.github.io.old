@@ -3,7 +3,7 @@ app={
 		if(! window.localStorage){     
 			return false;
 		}  
-		key = localStorage.getItem("key") || prompt("输入你的id");
+		key = localStorage.getItem("key") ? localStorage.getItem("key") : prompt("输入你的id");
 		localStorage.setItem("key",key);
 
 		map.centerAndZoom("济南",12);                
