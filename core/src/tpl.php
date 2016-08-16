@@ -6,7 +6,8 @@ switch($route){
 	case "index":index();break; 
 	case "list":list_();break;  
 	case "see":see();break;  
-	case "map":map();break; 
+	case "map":map();break;  
+	case "video":video();break; 
 	default:
 	break;
 }
@@ -67,6 +68,14 @@ function map(){
 	$tpl->assign("data",$data);  
 	$tpl->MakeHtmlFile("map.html","map.html"); 
 	header("location: ".SHOWAPP."/map.html");
+}
+function video(){ 
+	$tpl=T(); 
+	$a=F("setting");
+	$data=$a->get("about"); 
+	$tpl->assign("data",$data);  
+	$tpl->MakeHtmlFile("video.html","video.html"); 
+	header("location: ".SHOWAPP."/video.html");
 }
  
 ?>

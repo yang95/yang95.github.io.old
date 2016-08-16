@@ -7,6 +7,7 @@
       <ul class="am-list admin-sidebar-list">
         <li><a href="index.php"><span class="am-icon-home"></span> 首页</a></li>
         
+        <li><a href="video.php"><span class="am-icon-table"></span> 视频</a></li>
         <li><a href="list.php"><span class="am-icon-table"></span> 列表</a></li>
         <li><a href="form.php"><span class="am-icon-pencil-square-o"></span> 编辑</a></li>
         <li><a href="aboutme.php"><span class="am-icon-sign-out"></span> 设置</a></li>

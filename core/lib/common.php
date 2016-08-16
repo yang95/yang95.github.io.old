@@ -6,6 +6,7 @@ define("SHOWAPP","../../git/app");
 
 require_once(CORE . "/class/fileCache.class.php");
 require_once(CORE . "/class/mcrypt.class.php");
+require_once(CORE . "/class/dom.class.php");
 
 
 function F($model){

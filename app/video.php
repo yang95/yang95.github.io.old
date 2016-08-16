@@ -23,29 +23,16 @@
     <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">统计</strong> / <small>account</small></div>
   </div>
 
-  <div class="am-tabs am-margin" data-am-tabs>
+  <div class="am-tabs am-margin" data-am-tabs id="container">
    
     
 
-      <!-- 统计信息 -->
-<ul class="am-avg-sm-1 am-avg-md-4 am-margin am-padding am-text-center admin-content-list ">
-      <li><a href="../core/src/tpl.php?func=index" class="am-text-success"  target="_blank">
-	  <span class="am-icon-btn am-icon-file-text"></span><br>生成主页</a>
-	  </li>
-      <li><a href="../core/src/tpl.php?func=list" class="am-text-warning" target="_blank">
-	  <span class="am-icon-btn am-icon-briefcase"></span><br>生成列表<br></a></li>
-      <li><a href="../core/src/tpl.php?func=map" class="am-text-danger" target="_blank">
-        <span class="am-icon-btn am-icon-recycle"></span>
-        <br>生成地图</a>
-      </li>
-      <li><a href="../core/src/tpl.php?func=video" target="_blank" class="am-text-secondary"><span class="am-icon-btn am-icon-user-md"></span><br>生成视频页</a></li>
-    </ul>
-
-      <!-- 统计信息 -->
+ 
     
   </div>
 
   
+<a class="am-icon-btn " onClick="getvideo.load()" >加载更多</a>
    
 </div>
 <!-- content end -->
@@ -65,19 +52,33 @@
 <![endif]-->
 
 <!--[if (gte IE 9)|!(IE)]><!-->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/amazeui.min.js"></script>
-<!--<![endif]-->
-<script src="assets/js/app.js"></script>
-
-
-
-    <link href="um/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
-    <script type="text/javascript" charset="utf-8" src="um/umeditor.config.js"></script>
-    <script type="text/javascript" charset="utf-8" src="um/umeditor.min.js"></script>
-    <script type="text/javascript" src="um/lang/zh-cn/zh-cn.js"></script>
+<script src="assets/js/jquery.min.js"></script> 
+ 
 <script>
-   var um = UM.getEditor('myEditor');
+   
+   container=$("#container");
+   url="../core/src/video.php?func=getvideo";
+   getvideo={
+	   load:function(){
+		   var me=this;
+		   $.getJSON(url,function(d,e){
+			   console.log(d);
+			   me.success(d);
+		   });
+	   },
+	   success:function(d){
+		   var me=this;
+		   $.each(d.photos,function(k,v){
+			   me.tpl(v);
+		   });
+	   },
+	   tpl:function(v){
+		   var str="<a href='"+v.mp4Url+"'><img style='height:300px' src='"+v.thumbnailUrl+"'/>"+v.caption+"</a>";
+		   container.append(str);
+	   }
+   };
+   
+   getvideo.load();
 </script>
 </body>
 </html>
