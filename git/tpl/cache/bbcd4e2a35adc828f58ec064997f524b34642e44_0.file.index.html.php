@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-08-15 11:56:58
+/* Smarty version 3.1.30, created on 2016-08-17 18:03:09
   from "E:\code\phpweb\blog\git\tpl\index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_57b13d8ae8ae68_73097338',
+  'unifunc' => 'content_57b4365d5385b8_95374782',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bbcd4e2a35adc828f58ec064997f524b34642e44' => 
     array (
       0 => 'E:\\code\\phpweb\\blog\\git\\tpl\\index.html',
-      1 => 1471233397,
+      1 => 1471428064,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_57b13d8ae8ae68_73097338 (Smarty_Internal_Template $_smarty_tpl) {
+function content_57b4365d5385b8_95374782 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -162,6 +162,13 @@ function content_57b13d8ae8ae68_73097338 (Smarty_Internal_Template $_smarty_tpl)
 						
 						<?php echo $_smarty_tpl->tpl_vars['data']->value["module2"];?>
 
+						
+						<div class="row">
+					<div class="col-md-offset-8 col-md-4">
+						<a href="http://yang95.com" class="btn btn-large btn-success">一个视频</a>
+					</div>
+				</div>
+				
 					</div>
 			</div>
 		</div>
