@@ -23,14 +23,10 @@
     <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">统计</strong> / <small>account</small></div>
   </div>
 
-  <div class="am-tabs am-margin" data-am-tabs id="container">
-   
-    
-
- 
-    
+  <div class="am-tabs am-margin" data-am-tabs id="container">    
   </div>
 
+  
   
 <a class="am-icon-btn " onClick="getvideo.load()" >加载更多</a>
    
