@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-08-17 18:03:09
+/* Smarty version 3.1.30, created on 2016-08-21 22:03:57
   from "E:\code\phpweb\blog\git\tpl\index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_57b4365d5385b8_95374782',
+  'unifunc' => 'content_57b9b4cd8ff332_23665647',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bbcd4e2a35adc828f58ec064997f524b34642e44' => 
     array (
       0 => 'E:\\code\\phpweb\\blog\\git\\tpl\\index.html',
-      1 => 1471428064,
+      1 => 1471788224,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_57b4365d5385b8_95374782 (Smarty_Internal_Template $_smarty_tpl) {
+function content_57b9b4cd8ff332_23665647 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -114,7 +114,7 @@ function content_57b4365d5385b8_95374782 (Smarty_Internal_Template $_smarty_tpl)
 	<div class="row">
 		<div class="col-md-8 col-sm-12">
 			<div class="education">
-				<h2 class="white">经历</h2>
+				<h2 class="white">最爱的一句话</h2>
 					<div class="education-content">
 						<h4 class="education-title accent"></h4>
 							 
@@ -157,7 +157,7 @@ function content_57b4365d5385b8_95374782 (Smarty_Internal_Template $_smarty_tpl)
 		</div>
 		<div class="col-md-8 col-sm-12">
 			<div class="experience">
-				<h2 class="white">经验</h2>
+				<h2 class="white">域名</h2>
 					<div class="experience-content">
 						
 						<?php echo $_smarty_tpl->tpl_vars['data']->value["module2"];?>
