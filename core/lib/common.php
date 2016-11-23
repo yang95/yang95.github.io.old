@@ -1,4 +1,7 @@
 <?php
+
+date_default_timezone_set('Asia/Shanghai');//'Asia/Shanghai'   亚洲/上海
+
 define("CORE",dirname(dirname(__FILE__)));
 define("FILE",dirname(dirname(__FILE__)) . "/data/");
 define("GIT",dirname(dirname(dirname(__FILE__))) . "/git/"); 
