@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-11-23 01:51:02
+/* Smarty version 3.1.30, created on 2016-11-23 09:57:34
   from "E:\code\phpweb\blog\git\tpl\index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5834f60697a2f2_21341408',
+  'unifunc' => 'content_5834f78e4adce9_22010516',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bbcd4e2a35adc828f58ec064997f524b34642e44' => 
     array (
       0 => 'E:\\code\\phpweb\\blog\\git\\tpl\\index.html',
-      1 => 1479865835,
+      1 => 1479866201,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5834f60697a2f2_21341408 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5834f78e4adce9_22010516 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,7 +78,7 @@ function content_5834f60697a2f2_21341408 (Smarty_Internal_Template $_smarty_tpl)
 				</p>
 				<div class="row">
 					<div class="col-md-offset-8 col-md-4">
-						<a href="yangakw.cn" class="btn btn-large btn-success">查看博客</a>
+						<a href="http://yangakw.cn" class="btn btn-large btn-success">查看博客</a>
 					</div>
 				</div>
 			</div>
@@ -123,7 +123,7 @@ function content_5834f60697a2f2_21341408 (Smarty_Internal_Template $_smarty_tpl)
 							
 							<div class="row">
 					<div class="col-md-offset-8 col-md-4">
-						<a href="ly.yang95.com" class="btn btn-large btn-success">一个网站</a>
+						<a href="http://yang95.com" class="btn btn-large btn-success">一个网站</a>
 					</div>
 				</div>
 					</div>
@@ -148,7 +148,7 @@ function content_5834f60697a2f2_21341408 (Smarty_Internal_Template $_smarty_tpl)
 		<div class="col-md-4 col-sm-12">
 			<div class="contact">
 				<h2>Contact</h2>
-					<p><i class="fa fa-map-marker"></i> 山东省济南市</p>
+					<p><i class="fa fa-map-marker"></i> 北京市朝阳区</p>
 					<p><i class="fa fa-phone"></i> 136****0619</p>
 					<p><i class="fa fa-envelope"></i> yangakw@qq.com</p>
 					<p><i class="fa fa-globe"></i> yangakw.cn</p>
@@ -156,7 +156,7 @@ function content_5834f60697a2f2_21341408 (Smarty_Internal_Template $_smarty_tpl)
 		</div>
 		<div class="col-md-8 col-sm-12">
 			<div class="experience">
-				<h2 class="white">域名</h2>
+				<h2 class="white">瞎搞</h2>
 					<div class="experience-content">
 						
 						<?php echo $_smarty_tpl->tpl_vars['data']->value["module2"];?>
@@ -164,7 +164,7 @@ function content_5834f60697a2f2_21341408 (Smarty_Internal_Template $_smarty_tpl)
 						
 						<div class="row">
 					<div class="col-md-offset-8 col-md-4">
-						<a href="http://yang95.com" class="btn btn-large btn-success">一个简介</a>
+						<a href="http://ly.yang95.com" class="btn btn-large btn-success">一个xx</a>
 					</div>
 				</div>
 				
