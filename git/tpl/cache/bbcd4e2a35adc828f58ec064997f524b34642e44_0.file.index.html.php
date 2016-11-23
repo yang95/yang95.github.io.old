@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-10-25 02:35:01
+/* Smarty version 3.1.30, created on 2016-11-23 01:51:02
   from "E:\code\phpweb\blog\git\tpl\index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_580ec4d57f6101_36928307',
+  'unifunc' => 'content_5834f60697a2f2_21341408',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bbcd4e2a35adc828f58ec064997f524b34642e44' => 
     array (
       0 => 'E:\\code\\phpweb\\blog\\git\\tpl\\index.html',
-      1 => 1477362531,
+      1 => 1479865835,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_580ec4d57f6101_36928307 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5834f60697a2f2_21341408 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,7 +78,7 @@ function content_580ec4d57f6101_36928307 (Smarty_Internal_Template $_smarty_tpl)
 				</p>
 				<div class="row">
 					<div class="col-md-offset-8 col-md-4">
-						<a href="list.html" class="btn btn-large btn-success">查看文章</a>
+						<a href="yangakw.cn" class="btn btn-large btn-success">查看博客</a>
 					</div>
 				</div>
 			</div>
@@ -123,7 +123,7 @@ function content_580ec4d57f6101_36928307 (Smarty_Internal_Template $_smarty_tpl)
 							
 							<div class="row">
 					<div class="col-md-offset-8 col-md-4">
-						<a href="map.html" class="btn btn-large btn-success">一个地图</a>
+						<a href="ly.yang95.com" class="btn btn-large btn-success">一个网站</a>
 					</div>
 				</div>
 					</div>
@@ -135,8 +135,7 @@ function content_580ec4d57f6101_36928307 (Smarty_Internal_Template $_smarty_tpl)
 					<ul>
 						<li>html / css</li>
 						<li>js / jquery</li>
-						<li>php / thinkphp</li>
-						<li>chinese / yushanhua</li>
+						<li>php / thinkphp</li> 
 					</ul>
 			</div>
 		</div>
@@ -165,7 +164,7 @@ function content_580ec4d57f6101_36928307 (Smarty_Internal_Template $_smarty_tpl)
 						
 						<div class="row">
 					<div class="col-md-offset-8 col-md-4">
-						<a href="http://yang95.com" class="btn btn-large btn-success">一个视频</a>
+						<a href="http://yang95.com" class="btn btn-large btn-success">一个简介</a>
 					</div>
 				</div>
 				
@@ -181,7 +180,7 @@ function content_580ec4d57f6101_36928307 (Smarty_Internal_Template $_smarty_tpl)
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 col-sm-12">
-				<p>Copyright &copy; 2016.yangakw All rights reserved. </p>
+				<p>Copyright &copy; 2016-2017.yangakw All rights reserved. </p>
 				<ul class="social-icons">
 					<li><a href="#" class="fa fa-facebook"></a></li>
                     <li><a href="#" class="fa fa-google-plus"></a></li>
