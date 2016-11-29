@@ -1,0 +1,130 @@
+	<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title> </title> 
+	<link href="css/style.css" type="text/css" rel="stylesheet"></link>
+
+</head>
+<body id="body">
+	
+	<div class="container"> 
+		<div class="main-menu ">
+		
+		<h2>	
+			<a href="index.html"><img src="img/logo.jpg" width="130px;"/></a>
+</h2>
+			<ul>
+				
+				<li>
+					<a href='live.html'>活在威海</a>
+				</li>
+				
+				<li>
+					<a href='eat.html'>吃在威海</a>
+				</li>
+				
+				<li>
+					<a href='rushan.html'>母爱圣地，幸福乳山</a>
+				</li>
+				<li>
+					<a href='rongcheng.html'>天尽头，成山头</a>
+				</li>
+				
+				<li>
+					<a href='liugongdao.html'>刘公岛，不只是一个岛</a>
+				</li>
+				
+				<li>
+					<a href='story.html'>威海故事</a>
+				</li>
+			</ul>
+		
+		</div> 
+		<!---菜单end---> 
+		
+		<div class="main ">
+			<div class="picture"> 
+				<div style="position:absolute ;height:300px; overflow:hidden;"> 
+					<a id='a' href="http://weibo.com/weihaifabu"><img src="img/1.jpg" id='img'> </a>  
+					<a class="p-btn" id="p-btn">威海最美故事</a>
+				</div>
+			</div>
+				<div class="table"> 
+				<table width="100%">  
+				<tr>
+				<td>
+				<p>
+				<a href="index.html"><img style="width:188px;height:115px;" src="img/l.jpg" id='img'> </a> <br/>
+				威海市政府官网：<br/> <a href="http://www.weihai.gov.cn/ " target="_blank">http://www.weihai.gov.cn/ </a>
+				
+				</p>
+				</td>
+				<td>
+				<p>
+				威海市地处中纬度，属于北温带季风型大陆性气候，四季变化和季风进退都较明显。与同纬度的内陆地区相比，具有雨水丰富、年温适中、气候温和的特点。另外，受海洋的调节作用，又具有春冷、夏凉、秋暧、冬温，昼夜温差小、无霜期长、大风多和湿度大等海洋性气候特点。全市历年平均气温12.2摄氏度，历年平均降水量737.7毫米，历年平均日照时数2480.0小时。2011年，全市气温偏低，降水偏多，日照时数偏少。
+				
+				</p>
+				</td>
+				</tr>
+				
+				<tr>
+			
+				</tr>
+				</table>
+			</div>
+			
+			
+		 
+			
+		</div> <!--end main--->
+		 
+		
+		
+		
+			
+	</div><!---end container-->
+	
+	
+	
+</body>
+</html> 
+<script> 
+var list=[
+	{"img":"img/1.jpg","text":"威海风景","href":"http://weibo.com/weihaifabu"},
+	{"img":"img/2.jpg","text":"威海刘公岛","href":"http://www.liugongdao.com.cn/"},
+	{"img":"img/3.jpg","text":"银滩天下第一滩","href":"http://you.ctrip.com/sight/rushan2046/10695.html"},
+	{"img":"img/4.jpg","text":"最美乳山","href":"http://you.ctrip.com/sight/rushan2046/10695.html"},
+	{"img":"img/5.jpg","text":"成山头天尽头","href":"http://www.mafengwo.cn/poi/14669.html"},
+	{"img":"img/6.jpg","text":"威海历史","href":"http://mil.sohu.com/20140328/n397385474.shtml"}, 
+	 ];  
+var INIT= function(list){
+	var img = document.getElementById("img");
+	var p_btn = document.getElementById("p-btn"); 
+	var a = document.getElementById("a");
+	var i = 0;
+	var tmp = 0;
+	picture = function(){
+		var getKey = function(len,i){
+			if(i<len-1){
+				return ++i;
+			}else{
+				return 0;
+			}
+		};
+		if(tmp == i){ 
+			i = getKey(list.length,i); 
+			tmp = i;
+		}else{
+			i = tmp;
+		} 
+		img.src = list[i].img; 
+		p_btn.text=	list[i].text; 
+		a.href=	list[i].href; 
+		console.log(i);	
+	} 
+	self.setInterval("picture()",3000);
+}(list); 
+</script>
+	 
