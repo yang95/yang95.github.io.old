@@ -5,6 +5,10 @@ body{
 	background-repeat:no-repeat;
   background-attachment:fixed
 } 
+a{  
+	color:#666;
+	text-decoration: none;
+}
 .container{
 	width:980px;
 	margin:20px auto;
@@ -25,14 +29,13 @@ body{
 }
 .main-menu li{
 	display:inline-block;
-	min-width:50px;
+	min-width:100px;
 	list-style:none;
 	border-bottom:solid #ccc 1px;
 	padding-top:15px;
 	padding-bottom:15px;
 }
 .main-menu li a{
-	text-decoration: none;
 	color:#666;
 	font-size:15px;
 }
@@ -100,4 +103,11 @@ body{
 	height:26px;
 	line-height:26px;
 	border-bottom:solid #EEE 1px;
+}
+.footer{
+	width:100%; 
+	text-align:center;
+	height:50px;
+	line-height:50px;
+	font-size:15px;
 }
