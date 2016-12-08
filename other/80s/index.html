@@ -46,8 +46,50 @@ div#columns figure img {
 div#columns:hover figure:not(:hover) { opacity: 0.4; }                                           
 #loading{position:fixed;_position:absolute;top:50%;left:50%;width:120px;height:120px;overflow:hidden;
 background:url(http://filesimg.111cn.net/2014/05/20/20140520133721387.gif) no-repeat;z-index:10;display:none;}
+.model{
+	top:0;
+	position:fixed;
+	padding:20px 30px; 
+	height:750px;
+	width:100%;
+	background:rgba(0,0,0,0.8); 
+	color:#FFF;
+	display:none;
+	overflow: auto;   
+	z-index:5;
+}
+.auto-height{ 
+	height:600px;
+	overflow:auto;
+	background:#666;
+}
+.model ol{ 
+	font-size:24px;
+}
+.model ol li{ 
+	font-size:15px;
+}
+.model a {
+	text-decoration:none;
+	color:#FFF;
+} 
 </style>
  
+ <div class="model">
+	<div style="padding:2px 30px;">
+	<h2>种子详情
+	<span style="float:right;margin-right:30px;cursor:pointer" id="close-model">
+		关闭
+	</span> 
+	</h2>
+	
+	</div>
+	<div class="auto-height">
+		<ol id="thunder">
+			 
+		</ol>
+	</div>
+ </div>
  <div style="margin:10px auto;width:1100px;">
 	 <div id="columns">
 	  
@@ -64,24 +106,57 @@ background:url(http://filesimg.111cn.net/2014/05/20/20140520133721387.gif) no-re
 	 
  </div>
 
-<script>              
+<script>      
+
+	global_data = [];
+    page = 10009;
+    loadmore(page); 
+	$("#close-model").click(function(){ 
+		$(".model").hide();
+	});
+	$("#loadmore").click(function(){
+		page=page+100;
+        loadmore(page);
+    });         
+	$("body").delegate("figure","click",function(){
+		var deep  = $(this).data("deep");
+		i_thunder(deep);
+		$(".model").show();
+	});
 	var base_img = 'http://php.net/images/logo.php';
      //i am script
-    var i_htm = function(img,title,content,thunder){
+    var i_htm = function(deep,img,title,content){
 			if(img == undefined){
 				img = base_img;
 			}
 			if(thunder == undefined){
 				thunder = thunder;
 			}
-            var html_item = '<figure>';
+            var html_item = '<figure data-deep = "'+deep+'" >   ';
             var html_item = html_item + '<img src="'+img+'" alt="'+title+'"/>';
             var html_item = html_item + '<figcaption>'; 
-            var html_item = html_item + '<p><a href="'+thunder+'" title="'+title+'" data-gallery> '+title+' </a>'+content; 
-            var html_item = html_item + '</p> </figcaption></figure>'; 
+            var html_item = html_item + '<p> '+title+content; 
+            var html_item = html_item + '</p>  </figcaption></figure>'; 
             
             return html_item;
        }
+	  var i_thunder=function(deep){
+		 var tmp = global_data[deep];
+		 var str="";
+		 for(i in tmp){
+			str+="<li>"+i+"<ol>";
+			var i_tmp = tmp[i];
+			for(j in i_tmp){
+			str+='<li>';
+			str+='<a href="'+i_tmp[j].thunder+'">';
+			str+=''+i_tmp[j].name+'</a>';
+			str+='</li>';
+			}
+			str+='</ol></li>';
+		 }
+		 str+='</li>';
+		 $("#thunder").html(str);
+	  }
      
     var works = function(html){
         $("#columns").append(html);
@@ -90,29 +165,27 @@ background:url(http://filesimg.111cn.net/2014/05/20/20140520133721387.gif) no-re
          $("#loading").show();//显示loading
         setTimeout("$('#loading').hide();", 2000);//隐藏loading
     }
-    function loadmore(PAGE){
+    function loadmore(PAGE){ 
         $.get( "movie-movie-"+page+".json" ,function(d,s){
             if(typeof(d) != "object"){
-                d = JSON.parse(d);
-            }
-            console.log(d);
+                  d = JSON.parse(d); 
+            } 
             loading();
 			for(i in d){
 				if( i.indexOf("base")!=-1  ){
 					var tmp = d[i];
-					var i_t = i_htm(tmp.logo,tmp.title,tmp.logo,tmp.title,tmp.jietu);
+					var i_t = i_htm(tmp.deep,tmp.logo,tmp.title,tmp.title );
 					works(i_t); 
 				} 
-			}
-			
-              
-        });
+				if( i.indexOf("thunder")!=-1  ){
+					var deep = i.split("_");
+					deep = deep[2];
+					var tmp = d[i];
+					global_data[deep]=tmp;
+				} 
+			}  
+        }); 
     }
-    page = 10009;
-    loadmore(page);
-    $("#loadmore").click(function(){
-		page=page+100;
-        loadmore(page);
-    });</script>
+	</script>
 </body>
 </html>
