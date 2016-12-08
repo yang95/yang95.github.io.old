@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-08 10:28:50
+/* Smarty version 3.1.30, created on 2016-12-08 10:29:56
   from "E:\code\phpweb\blog\git\tpl\article.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5848c5622af7c6_90001431',
+  'unifunc' => 'content_5848c5a4331602_32981288',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ac10d9d90e1eddc589aaf81b68961de3db6296a4' => 
     array (
       0 => 'E:\\code\\phpweb\\blog\\git\\tpl\\article.html',
-      1 => 1481164124,
+      1 => 1481164192,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5848c5622af7c6_90001431 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5848c5a4331602_32981288 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,8 +78,8 @@ function content_5848c5622af7c6_90001431 (Smarty_Internal_Template $_smarty_tpl)
 				<?php echo $_smarty_tpl->tpl_vars['article']->value["body"];?>
 
 				</p>
-			</div>
-			<!--PC版-->
+				
+					<!--PC版-->
 <div id="SOHUCS" sid="请将此处替换为配置SourceID的语句"></div>
 <?php echo '<script'; ?>
  charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ><?php echo '</script'; ?>
@@ -92,6 +92,9 @@ conf: 'prod_f811d5fceb1ba81cb014a75f67caf941'
 });
 <?php echo '</script'; ?>
 >
+
+			</div>
+		
 
 		</div>
 		<div class="col-md-4 col-sm-12">
