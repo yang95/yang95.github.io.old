@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>80s</title>
+
+    <script src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+<style type="text/css">
+#columns {
+  column-width: 320px;
+  column-gap: 15px;
+  width: 90%;
+  max-width: 1100px;
+  margin: 50px auto;
+}     
+div#columns figure {
+  background: #fefefe;
+  border: 2px solid #fcfcfc;
+  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  margin: 0 2px 15px;
+  padding: 15px; padding-bottom: 10px;
+  transition: opacity .4s ease-in-out;
+  column-break-inside: avoid;
+  display: inline-block;
+}
+div#columns figure img {
+  width: 100%; height: auto;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 5px;
+}      
+@media screen and (max-width: 750px) {
+  #columns { column-gap: 0px; }
+  #columns figure { width: 100%; }
+}                               
+div#columns:hover figure:not(:hover) { opacity: 0.4; }                                           
+#loading{position:fixed;_position:absolute;top:50%;left:50%;width:120px;height:120px;overflow:hidden;
+background:url(http://filesimg.111cn.net/2014/05/20/20140520133721387.gif) no-repeat;z-index:10;display:none;}
+</style>
+<div id="loading"></div>
+ 
+ <div style="margin:10px auto;width:1100px;">
+	 <div id="columns">
+	  
+	</div>                    
+ </div>
+ 
+<script>              
+	var base_img = 'http://php.net/images/logo.php';
+     //i am script
+    var i_htm = function(img,title,content,thunder){
+			if(img == undefined){
+				img = base_img;
+			}
+			if(thunder == undefined){
+				thunder = thunder;
+			}
+            var html_item = '<figure>';
+            var html_item = html_item + '<img src="'+img+'" alt="'+title+'"/>';
+            var html_item = html_item + '<figcaption>'; 
+            var html_item = html_item + '<p><a href="'+thunder+'" title="'+title+'" data-gallery> '+title+' </a>'+content; 
+            var html_item = html_item + '</p> </figcaption></figure>'; 
+            
+            return html_item;
+       }
+     
+    var works = function(html){
+        $("#columns").append(html);
+    }
+    function loading(){
+         $("#loading").show();//显示loading
+        setTimeout("$('#loading').hide();", 2000);//隐藏loading
+    }
+    function loadmore(PAGE){
+        $.get( "movie-movie-"+page+".json" ,function(d,s){
+            if(typeof(d) != "object"){
+                d = JSON.parse(d);
+            }
+            console.log(d);
+            loading();
+			for(i in d){
+				if( i.indexOf("base")!=-1  ){
+					var tmp = d[i];
+					var i_t = i_htm(tmp.logo,tmp.title,tmp.logo,tmp.title,tmp.jietu);
+					works(i_t); 
+				} 
+			}
+			
+              
+        });
+    }
+    page = 10009;
+    loadmore(page);
+    $("#loadmore").click(function(){
+		page=page+100;
+        loadmore(page);
+    });</script>
+</body>
+</html>

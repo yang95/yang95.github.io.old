@@ -77,6 +77,15 @@
             </div>
           </div>
 
+		  
+		   <div class="am-form-group">
+            <label for="user-intro" class="am-u-sm-3 am-form-label">导航 / Navbar</label>
+            <div class="am-u-sm-9">
+              <textarea class="" rows="5" id="user-navbar" placeholder="输入"></textarea>
+            </div>
+          </div>
+		  
+		  
           <div class="am-form-group">
             <label for="user-intro" class="am-u-sm-3 am-form-label">简介 / Intro</label>
             <div class="am-u-sm-9">
@@ -99,12 +108,7 @@
             </div>
           </div>
 		  
-		     <div class="am-form-group">
-            <label for="user-intro" class="am-u-sm-3 am-form-label">模块 / Module3</label>
-            <div class="am-u-sm-9">
-              <textarea class="" rows="5" id="user-module3" placeholder="输入"></textarea>
-            </div>
-          </div>
+		    
 		  
 
           <div class="am-form-group">
@@ -150,10 +154,10 @@ app={
 			$("#user-email").val(data.email);
 			$("#user-QQ").val(data.QQ);
 			$("#user-weibo").val(data.weibo);
+			$("#user-navbar").val(data.navbar);
 			$("#user-intro").val(data.intro);
 			$("#user-module1").val(data.module1);
 			$("#user-module2").val(data.module2);
-			$("#user-module3").val(data.module3);
 		});
 	},
 	url:"../core/src/about.php",
@@ -164,10 +168,10 @@ app={
 			"email":$("#user-email").val(),
 			"weibo":$("#user-weibo").val(),
 			"QQ":$("#user-QQ").val(),
+			"navbar":$("#user-navbar").val(),
 			"intro":$("#user-intro").val(),
 			"module1":$("#user-module1").val(),
 			"module2":$("#user-module2").val(),
-			"module3":$("#user-module3").val(),
 		};
 		$.post(this.url,{"func":"editsub","form":form},function(){
 			location.reload(true);

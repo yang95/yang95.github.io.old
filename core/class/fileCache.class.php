@@ -130,7 +130,7 @@ class fileCache
      /*
     * 强制替换保存
     */
-    public function saveo($key,$value_new){  
+    public function saveo($key,$value_new){ 
             $this->data[$key] = $value_new;
             self::save($this->file,$this->data);
             return true; 

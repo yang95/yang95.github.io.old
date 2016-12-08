@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-08 10:29:56
+/* Smarty version 3.1.30, created on 2016-12-08 11:27:09
   from "E:\code\phpweb\blog\git\tpl\article.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5848c5a4331602_32981288',
+  'unifunc' => 'content_5848d30d7a0597_56016264',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ac10d9d90e1eddc589aaf81b68961de3db6296a4' => 
     array (
       0 => 'E:\\code\\phpweb\\blog\\git\\tpl\\article.html',
-      1 => 1481164192,
+      1 => 1481167626,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5848c5a4331602_32981288 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5848d30d7a0597_56016264 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,6 +49,26 @@ function content_5848c5a4331602_32981288 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- header section -->
 <header>
+<!-- Fixed navbar -->
+    <nav class="nav-skills navbar bg-skills navbar-fixed-top" role="navigation">
+     <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><?php echo $_smarty_tpl->tpl_vars['data']->value["name"];?>
+</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <?php echo $_smarty_tpl->tpl_vars['data']->value["navbar"];?>
+
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav><!--/nav--->
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 col-sm-12">

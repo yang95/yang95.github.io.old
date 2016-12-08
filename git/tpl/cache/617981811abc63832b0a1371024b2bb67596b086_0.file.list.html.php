@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-08-12 09:50:57
+/* Smarty version 3.1.30, created on 2016-12-08 11:27:09
   from "E:\code\phpweb\blog\git\tpl\list.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_57ad2b8159ba86_37405178',
+  'unifunc' => 'content_5848d30d9d7145_93705834',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '617981811abc63832b0a1371024b2bb67596b086' => 
     array (
       0 => 'E:\\code\\phpweb\\blog\\git\\tpl\\list.html',
-      1 => 1470966649,
+      1 => 1481167622,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_57ad2b8159ba86_37405178 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5848d30d9d7145_93705834 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,6 +73,26 @@ font-size:16px;
 
 <!-- header section -->
 <header>
+<!-- Fixed navbar -->
+    <nav class="nav-skills navbar bg-skills navbar-fixed-top" role="navigation">
+     <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><?php echo $_smarty_tpl->tpl_vars['data']->value["name"];?>
+</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <?php echo $_smarty_tpl->tpl_vars['data']->value["navbar"];?>
+
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav><!--/nav--->
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 col-sm-12">

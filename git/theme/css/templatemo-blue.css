@@ -29,6 +29,28 @@ h2 {
   padding-bottom: 14px;
 }
 
+.nav-skills{
+	position:fixed;
+	top:0;  
+}
+.bg-skills{
+	background: #3366CC;
+    color: #FFF;
+}
+.nav-skills li  a{
+	color: #FFF;
+}  
+.nav-skills .open>a, .nav-skills .open>a:focus, .nav-skills .open>a:hover, .nav-skills li>a:hover{ 
+	background: #FFF;
+    color: #3366CC;
+} 
+.nav-skills .navbar-toggle .icon-bar{
+	background: #FFF;
+}
+.nav-skills .navbar-brand{
+	color: #FFF;
+	font-size:20px;
+}
 .accent {
   font-family: 'Proxima Bold';
   line-height: 14px;
