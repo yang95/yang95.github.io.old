@@ -158,6 +158,12 @@ background:url(http://filesimg.111cn.net/2014/05/20/20140520133721387.gif) no-re
 		 $("#thunder").html(str);
 	  }
      
+	var img_src = function(src , host = 'http://t.dyxz.la' ){
+		 var re = /(\w+):\/\/([^\:|\/]+)(\:\d*)?(.*\/)([^#|\?|\n]+)?(#.*)?(\?.*)?/i;   
+		 var match = src.match(re);
+		 return host+match[4]+match[5];
+		 console.log(src,match);
+	};
     var works = function(html){
         $("#columns").append(html);
     }
@@ -173,8 +179,8 @@ background:url(http://filesimg.111cn.net/2014/05/20/20140520133721387.gif) no-re
             loading();
 			for(i in d){
 				if( i.indexOf("base")!=-1  ){
-					var tmp = d[i];
-					var i_t = i_htm(tmp.deep,tmp.logo,tmp.title,tmp.title );
+					var tmp = d[i]; 
+					var i_t = i_htm(tmp.deep,img_src(tmp.logo),tmp.title,tmp.title );
 					works(i_t); 
 				} 
 				if( i.indexOf("thunder")!=-1  ){

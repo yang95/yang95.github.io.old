@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-13 14:29:45
+/* Smarty version 3.1.30, created on 2016-12-14 10:35:35
   from "E:\code\phpweb\blog\git\tpl\index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_584f9559be2bf8_03595290',
+  'unifunc' => 'content_5850aff79f4223_27042417',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bbcd4e2a35adc828f58ec064997f524b34642e44' => 
     array (
       0 => 'E:\\code\\phpweb\\blog\\git\\tpl\\index.html',
-      1 => 1481610580,
+      1 => 1481682933,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_584f9559be2bf8_03595290 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5850aff79f4223_27042417 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -90,25 +90,24 @@ function content_584f9559be2bf8_03595290 (Smarty_Internal_Template $_smarty_tpl)
 	<div class="row">
 		<div class="col-md-8 col-sm-12">
 			<div class="about">
-				<h3 class="accent"><?php echo $_smarty_tpl->tpl_vars['data']->value["name"];?>
-</h3>
-				<h2><?php echo $_smarty_tpl->tpl_vars['data']->value["email"];?>
-</h2>
+				<h3 class="accent">我会什么？</h3> 
 				<p>
 				<?php echo $_smarty_tpl->tpl_vars['data']->value["intro"];?>
 
 				</p>
+				
+					<br/><br/>
 				
 			</div>
 		</div>
 		<div class="col-md-4 col-sm-12">
 			<div class="skills">
 				<h2 class="white">Skills</h2>
-				<strong>PHP MySQL</strong>
-				<span class="pull-right">80%</span>
+				<strong>PHP</strong>
+				<span class="pull-right">89%</span>
 					<div class="progress">
 						<div class="progress-bar progress-bar-primary" role="progressbar" 
-                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                        aria-valuenow="89" aria-valuemin="0" aria-valuemax="100" style="width: 89%;"></div>
 					</div>
 				<strong>html/css</strong>
 				<span class="pull-right">85%</span>
@@ -122,6 +121,13 @@ function content_584f9559be2bf8_03595290 (Smarty_Internal_Template $_smarty_tpl)
 						<div class="progress-bar progress-bar-primary" role="progressbar" 
                         aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
 					</div>
+					<strong>java</strong>
+				<span class="pull-right">80%</span>
+					<div class="progress">
+						<div class="progress-bar progress-bar-primary" role="progressbar" 
+                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+					</div>
+				 
 					
 			</div>
 		</div>
@@ -140,7 +146,6 @@ function content_584f9559be2bf8_03595290 (Smarty_Internal_Template $_smarty_tpl)
 
 							
 							<div class="row">
-					
 				</div>
 					</div>
 			</div>
