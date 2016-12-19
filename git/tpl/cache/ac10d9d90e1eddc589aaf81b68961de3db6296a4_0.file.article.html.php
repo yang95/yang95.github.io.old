@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-08 11:27:09
+/* Smarty version 3.1.30, created on 2016-12-19 17:34:30
   from "E:\code\phpweb\blog\git\tpl\article.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5848d30d7a0597_56016264',
+  'unifunc' => 'content_5857a9a600b682_14895633',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ac10d9d90e1eddc589aaf81b68961de3db6296a4' => 
     array (
       0 => 'E:\\code\\phpweb\\blog\\git\\tpl\\article.html',
-      1 => 1481167626,
+      1 => 1482140061,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5848d30d7a0597_56016264 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5857a9a600b682_14895633 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -94,10 +94,16 @@ function content_5848d30d7a0597_56016264 (Smarty_Internal_Template $_smarty_tpl)
  |<?php echo $_smarty_tpl->tpl_vars['article']->value["from"];?>
  |<?php echo $_smarty_tpl->tpl_vars['article']->value["tag"];?>
  </small>
-				<p style="font-size:18px;font-family:微软雅黑;">
-				<?php echo $_smarty_tpl->tpl_vars['article']->value["body"];?>
+				
+				 <div width="95%">
+							<p style="font-size:18px;font-family:微软雅黑;">
+						<?php echo $_smarty_tpl->tpl_vars['article']->value["body"];?>
 
-				</p>
+						</p>
+				
+				</div>
+							
+							
 				
 					<!--PC版-->
 <div id="SOHUCS" sid="请将此处替换为配置SourceID的语句"></div>

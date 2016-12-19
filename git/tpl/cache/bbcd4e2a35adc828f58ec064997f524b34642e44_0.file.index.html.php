@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2016-12-14 10:35:35
+/* Smarty version 3.1.30, created on 2016-12-19 17:43:35
   from "E:\code\phpweb\blog\git\tpl\index.html" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5850aff79f4223_27042417',
+  'unifunc' => 'content_5857abc7402b34_94964343',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bbcd4e2a35adc828f58ec064997f524b34642e44' => 
     array (
       0 => 'E:\\code\\phpweb\\blog\\git\\tpl\\index.html',
-      1 => 1481682933,
+      1 => 1482140611,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5850aff79f4223_27042417 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5857abc7402b34_94964343 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -91,10 +91,12 @@ function content_5850aff79f4223_27042417 (Smarty_Internal_Template $_smarty_tpl)
 		<div class="col-md-8 col-sm-12">
 			<div class="about">
 				<h3 class="accent">我会什么？</h3> 
+				<div width="95%">
 				<p>
 				<?php echo $_smarty_tpl->tpl_vars['data']->value["intro"];?>
 
 				</p>
+				</div>
 				
 					<br/><br/>
 				
@@ -137,17 +139,11 @@ function content_5850aff79f4223_27042417 (Smarty_Internal_Template $_smarty_tpl)
  <section class="container">
 	<div class="row">
 		<div class="col-md-8 col-sm-12">
-			<div class="education">
-				<h2 class="white">关于我</h2>
-					<div class="education-content">
-						<h4 class="education-title accent"></h4>
-							 
-							<?php echo $_smarty_tpl->tpl_vars['data']->value["module1"];?>
+			<div class="about">
+			<h3 class="accent">关于我</h3> 
+				 <?php echo $_smarty_tpl->tpl_vars['data']->value["module1"];?>
 
-							
-							<div class="row">
-				</div>
-					</div>
+							 
 			</div>
 		</div>
 		<div class="col-md-4 col-sm-12">
@@ -179,8 +175,13 @@ function content_5850aff79f4223_27042417 (Smarty_Internal_Template $_smarty_tpl)
 			<div class="experience"> 
 					<div class="experience-content">
 						
-						<?php echo $_smarty_tpl->tpl_vars['data']->value["module2"];?>
+						 <div width="95%">
+							<p>
+							<?php echo $_smarty_tpl->tpl_vars['data']->value["module2"];?>
 
+							</p>
+							</div>
+							
 						
 						<div class="row">
 					
