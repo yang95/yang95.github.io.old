@@ -12,8 +12,8 @@ var events =[];
 function push(){
 	if(arguments.length<1)return false;
 	var s = arguments[0];
-	var e = arguments[1]?arguments[1]:arguments[0];
-	var m = arguments[2]?arguments[2]:arguments[0]
+	var e = arguments[2]?arguments[1]:arguments[0];
+	var m = arguments[2]?arguments[2]:arguments[1]
 	events.push({
 		startDate:new Date(s),
 		endDate:new Date(e),
@@ -48,13 +48,18 @@ var begin  = 2017;
 for(i=0;i<50;i++){
 	var tmp=i+begin;
 	$.getScript("/data/"+tmp+".js",function(){
-		$('#calendar').calendar({ 
-		enableRangeSelection: true, 
-		clickDay: function(e) { 
-			pop_message(e.date.toLocaleDateString());
-		},
-		dataSource: events
-	});
+		 
 	});  //加载js文件
+	 
 }
  
+ 
+ setTimeout(function(){
+	 $('#calendar').calendar({ 
+				enableRangeSelection: true, 
+				clickDay: function(e) { 
+					pop_message(e.date.toLocaleDateString());
+				},
+				dataSource: events
+	});
+ },3000);
