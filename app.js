@@ -43,61 +43,18 @@ function pop_message(date){
 		}
 	}
 }
-$(function() {
-	$('#calendar').calendar({ 
-		enableRangeSelection: true,
-		renderEnd: function(e) {
-			if($('#render-end').prop('checked'))
-			{
-				$('#logs').append('<div class="render-end" style="color:#1C7C26">Render end (' + e.currentYear + ')</div');
-				refreshLog();
-			}
-		},
-		renderDay: function(e) {
-			if($('#render-day').prop('checked'))
-			{
-				$('#logs').append('<div class="render-day" style="color:#FF5B9D">Render day (' + e.date.toLocaleDateString() + ')</div');
-				refreshLog();
-			}
-		},
-		clickDay: function(e) {
-			if($('#click').prop('checked'))
-			{
-				$('#logs').append('<div class="click" style="color:#1F80C1">Click (' + e.date.toLocaleDateString() + ')</div');
-				refreshLog();
-			}
+
+var begin  = 2017;
+for(i=0;i<50;i++){
+	var tmp=i+begin;
+	$.getScript("/data/"+tmp+".js",function(){
+		$('#calendar').calendar({ 
+		enableRangeSelection: true, 
+		clickDay: function(e) { 
 			pop_message(e.date.toLocaleDateString());
-		},
-		dayContextMenu: function(e) {
-			if($('#contextmenu').prop('checked'))
-			{
-				$('#logs').append('<div class="contextmenu" style="color:#9D29B2">Context menu (' + e.date.toLocaleDateString() + ')</div');
-				refreshLog();
-			}
-		},
-		selectRange: function(e) {
-			if($('#range').prop('checked'))
-			{
-				$('#logs').append('<div class="range" style="color:#34A522">Select range (' + e.startDate.toLocaleDateString() +  ' -> ' + e.endDate.toLocaleDateString() +')</div');
-				refreshLog();
-			}
-		},
-		mouseOnDay: function(e) {
-			if($('#mouse-on').prop('checked'))
-			{
-				$('#logs').append('<div class="mouse-on" style="color:#F95902">Mouse on (' + e.date.toLocaleDateString() + ')</div');
-				refreshLog();
-			}
-		},
-		mouseOutDay: function(e) {
-			if($('#mouse-out').prop('checked'))
-			{
-				$('#logs').append('<div class="mouse-out" style="color:#F90202">Mouse out (' + e.date.toLocaleDateString() + ')</div');
-				refreshLog();
-			}
 		},
 		dataSource: events
 	});
-	
-	$('.log-display').click(function() { refreshLog(); });
-}); 
+	});  //加载js文件
+}
+ 
