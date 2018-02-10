@@ -1,0 +1,12 @@
+data1为涟漪戏鱼1的数据，
+背景1为涟漪戏鱼1的背景，
+data2为涟漪戏鱼2的数据，
+背景2为涟漪戏鱼2的背景，
+data中：
+totalFishNum为鱼的数量，bigFishNum为大鱼的数量;
+fishScale为鱼的大小；
+runSpeed鱼的逃跑速度；
+runDistance为鱼与鼠标距离多少时逃跑；
+totalWaterNum为水波的数量；
+redFishNum为红鱼的数量。
+alpha为水晕的强度。

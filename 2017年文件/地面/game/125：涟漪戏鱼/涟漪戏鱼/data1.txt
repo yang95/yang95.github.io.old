@@ -1,0 +1,1 @@
+totalFishNum=30&&bigFishNum=3&&fishScale=180&&runSpeed=20&&runDistance=100&&totalWaterNum=15&&redFishNum=20&&alpha=10&&

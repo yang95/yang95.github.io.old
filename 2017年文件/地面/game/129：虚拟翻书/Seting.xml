@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GameConfig>
+	<ip>202.142.20.208</ip>
+	<port>9339</port>
+	<ewn>5</ewn>
+	<ehn>5</ehn>
+	<ew>70</ew>
+	<eh>100</eh>
+	<actionSpeed>24</actionSpeed>
+	<minx>2</minx>
+	<miny>471</miny>
+	<maxx>817</maxx>
+	<maxy>752</maxy>
+</GameConfig>

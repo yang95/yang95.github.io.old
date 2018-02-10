@@ -1,0 +1,8 @@
+width=20//字母大小
+height=30//字母间距
+speed=1//下落速度
+timeNum=100//密度
+distance=10000//鼠标影响范围
+letterNum=200//字母总数
+wordNum=8//单词数量
+word1//单词

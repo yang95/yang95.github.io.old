@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="euc-kr"?>
+
+<value
+
+firstURL="image/page/img_0.jpg"
+
+TotalPages="20" 
+
+basicExp=".png"
+imgURL="image/page/"
+imgName="img_"
+
+imgPngExp=""
+imgSwfExp=""
+
+zoominURL="image/zoomin/"
+zoomName="img_"
+zoominExp=".gif"
+
+PageSelect="0"  
+
+MouseArea="150" 
+
+Sense="170"  		 
+SlideTime="2"
+
+menuGoPage="9,12,16"
+
+
+Speed="4" 
+Dspeed="4"
+Cspeed="4"  
+/>
+
+<!--Sense=170 侶角柑깃뇰랙럇女혐堵돨댕鬼,鑒令督댕，뇰랙혐堵督댕-->

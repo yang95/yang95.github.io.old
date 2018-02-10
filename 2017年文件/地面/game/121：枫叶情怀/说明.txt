@@ -1,0 +1,10 @@
+枫叶情怀文件夹下的data1:
+mapleNum为枫叶的数量；（数量太多可能会卡）
+flySpeed为枫叶飘起时的速度；
+backSpeed为枫叶落回时的速度（值越小速度越大，不要小于1）；
+time为枫叶飘起到落回的时间间隔；
+scale为枫叶的大小；
+widthNum为鼠标经过时枫叶散开的范围；
+totalNum为枫叶图片的种数；
+backImgNum为背景的数量；
+turnTime为切换背景的时间间隔。
