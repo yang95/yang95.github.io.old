@@ -1,1 +1,0 @@
-totalNum=9&&openSpeed=10&&closeSpeed=0&&width=80&&area=300&&much=8&&openTime=60&&rotationSpeed=5&&backImgNum=1&&turnTime=5000&&

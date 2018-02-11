@@ -1,1 +1,0 @@
-flashShell.exe Ъ§зжгъ.swf

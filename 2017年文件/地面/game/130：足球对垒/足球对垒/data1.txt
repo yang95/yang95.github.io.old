@@ -1,1 +1,0 @@
-FouNum=40&&speed=100&&width=128&&

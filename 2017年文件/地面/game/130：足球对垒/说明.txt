@@ -1,4 +1,0 @@
-data:
-FouNum为火花的数量；
-speed为踢中足球时的速度；
-width为足球的大小；

@@ -1,1 +1,0 @@
-totalNum=7&&speed=80&&scale=100&&

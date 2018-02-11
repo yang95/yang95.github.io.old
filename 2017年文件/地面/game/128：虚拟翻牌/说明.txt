@@ -1,6 +1,0 @@
-data：
-totalPaiNum为牌的数量；
-totalImgNum1为第一张牌中图片的数量（图片在文件夹Img1中）；
-x1为第一张牌的x坐标值；
-y1为第一张牌的y坐标值；
-依此类推。
